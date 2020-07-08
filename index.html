@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrations</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+	<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+	    <script type="text/x-template" class="regTemplate">
+	    		{{#each reg}}		
+					<li class="color">{{this}}</li>	
+				{{/each}}
+
+
+
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>The Registration Display</h1>
+		<div class="input&btn">
+			<p class="eg">e.g. CA 12345 <span>|</span> CJ 987-888 <span>|</span> CL 812</p>
+			<input id="regInput" class="regString" placeholder="enter registration here">
+			<button class="btn" id="displayBtn">Add</button>
+		</div>
+		<div class="display">
+
+		<p id="regDisplay"></p>
+
+		<div>
+			<select class="select">
+				<option value="default">Select Town</option>
+				<option value="CA">Cape Town</option>
+				<option value="CL">Stellenbosch</option>
+				<option value="CJ">Paarl</option>
+				<option value="all">Show All</option>
+			</select>
+			
+
+		</div>
+		<ul id="theList" class="style"></ul>
+	</div>
+	</div>
+
+
+	
+	<div class="container">
+		<h1>The Registration Display with Handlebars</h1>
+		<div class="input&btn">
+			<p class="eg">e.g. CA 12345 <span>|</span> CJ 987-888 <span>|</span> CL 812</p>
+			<input id="regInput2" class="regString2" placeholder="enter registration here">
+			<button class="btn" id="displayBtn2">Add</button>
+		</div>
+	<div class="display2">
+
+		<p id="regDisplay2"></p>
+
+		<div>
+			<select class="select2">
+				<option value="default">Select Town</option>
+				<option value="CA">Cape Town</option>
+				<option value="CL">Stellenbosch</option>
+				<option value="CJ">Paarl</option>
+				<option value="all">Show All</option>
+			</select>
+			
+
+		</div>
+		<ul class="theList2"></ul>
+	</div>
+	</div>
+
+</body>
+
+ <script src="js/registration-factory.js"></script>
+ <script src="js/registration-factory-handlebars.js"></script>
+
+<script src="js/registration-dom.js"></script>
+
+<script src="js/registration-handlebars.js"></script>
+
+
+</html>
