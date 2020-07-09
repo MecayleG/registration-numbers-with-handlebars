@@ -11,11 +11,11 @@ function TheRegistrations(allRegs){
 				numberPlates.push(input)
 				msg = "success";
 				} 
-				else{ msg = "not a valid registration";
+				else{ msg = "not a valid registration number";
 				
 				}
 			}else {
-				msg = "registration already entered";
+				msg = "registration number already entered";
 			}
 		} else {
 			msg = "enter a registration number";
@@ -26,9 +26,13 @@ function TheRegistrations(allRegs){
 	function validate(reg){
 		if(/C[ALJ] \d{3,5}$/.test(reg) || /C[ALJ] \d+\s|-\d+$/.test(reg)){
 			return reg;
-			
-		} 
+			}
 	}	
+	function noRepeat(entered){
+		if(!numberPlates.includes(entered)){
+			return entered;
+		} 
+	}
 
 	// function displaying registrations according to radio button selected
 	function optionSelected(selectType){
@@ -47,8 +51,7 @@ function TheRegistrations(allRegs){
 			return list;
 		}
 	}
-
-
+	
 	//function returning theRegs
 	function allTheRegs(){
 		console.log(numberPlates)
@@ -57,6 +60,7 @@ function TheRegistrations(allRegs){
 	return{
 		addingRegs,
 		validate,
+		noRepeat,
 		optionSelected,
 		allTheRegs
 	}

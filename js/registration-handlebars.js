@@ -26,12 +26,16 @@ function getRegistrations2(){
 var regVal2 = (regs.value).toUpperCase();
 var add = regFunction.addingRegs2(regVal2);
 msg.innerHTML = add;
-msg.classList.add("blue");
-if(add){
+
+if(add === "success"){
+	
 var each = {
 	reg: regFunction.allTheRegs2()
 }
 list.innerHTML = compilation(each)
+
+} else {
+	
 }
 setTimeout(function(){
 		msg.innerHTML = "";
@@ -50,7 +54,7 @@ var radio2 = regFunction.optionSelected2(dropType2);
 	reg: radio2
 }
 list.innerHTML = compilation(each);
-ul.innerHTML = "";
+// ul.innerHTML = "";
 
 }
 

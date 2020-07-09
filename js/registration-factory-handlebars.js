@@ -11,11 +11,11 @@ function TheRegistrations2(allRegs2){
 				numberPlates2.push(input2)
 				msg2 = "success";
 				} 
-				else{ msg2 = "not a valid registration";
+				else{ msg2 = "not a valid registration number";
 				
 				}
 			}else {
-				msg2 = "registration already entered";
+				msg2 = "registration number already entered";
 			}
 		} else {
 			msg2 = "enter a registration number";

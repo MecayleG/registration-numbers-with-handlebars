@@ -51,8 +51,11 @@ ul{
 	display: inline-block;
 }
 
-.blue{
-	color: #0066ff;
+.red{
+	color: red;
+}
+.green{
+	color: blue;
 }
 
 select{
