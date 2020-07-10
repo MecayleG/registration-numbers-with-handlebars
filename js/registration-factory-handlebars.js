@@ -14,10 +14,12 @@ function TheRegistrations2(allRegs2){
 				else{ msg2 = "not a valid registration number";
 				
 				}
-			}else {
+			}
+			else {
 				msg2 = "registration number already entered";
 			}
-		} else {
+		} 
+		else {
 			msg2 = "enter a registration number";
 		}		
 		return msg2;	
@@ -29,7 +31,7 @@ function TheRegistrations2(allRegs2){
 		if( selectType2 == "all"){
 			return numberPlates2;
 		}
-		else{
+		else {
 			var list2 = [];
 			for(var i = 0; i<numberPlates2.length; i++){
 
@@ -43,7 +45,6 @@ function TheRegistrations2(allRegs2){
 	}
 	//function returning theRegs
 	function allTheRegs2(){
-		console.log(numberPlates2)
 		return numberPlates2;
 	}
 	return{

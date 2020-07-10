@@ -14,10 +14,12 @@ function TheRegistrations(allRegs){
 				else{ msg = "not a valid registration number";
 				
 				}
-			}else {
+			}
+			else {
 				msg = "registration number already entered";
 			}
-		} else {
+		} 
+		else {
 			msg = "enter a registration number";
 		}		
 		return msg;	
@@ -26,7 +28,7 @@ function TheRegistrations(allRegs){
 	function validate(reg){
 		if(/C[ALJ] \d{3,5}$/.test(reg) || /C[ALJ] \d+\s|-\d+$/.test(reg)){
 			return reg;
-			}
+		}
 	}	
 	function noRepeat(entered){
 		if(!numberPlates.includes(entered)){
@@ -54,7 +56,6 @@ function TheRegistrations(allRegs){
 	
 	//function returning theRegs
 	function allTheRegs(){
-		console.log(numberPlates)
 		return numberPlates;
 	}
 	return{

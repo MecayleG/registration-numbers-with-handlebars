@@ -16,12 +16,11 @@ window.addEventListener("load", function(){
 	//function that checks if regs are valid or not
 function getRegistrations(){
 var regVal = (reg.value).toUpperCase();
-
 var toAdd = theRegFunction.addingRegs(regVal);
-display.innerHTML = toAdd
- var noRep = theRegFunction.noRepeat(theRegFunction.allTheRegs());
- var toVal = theRegFunction.validate(regVal)
+var noRep = theRegFunction.noRepeat(theRegFunction.allTheRegs());
+var toVal = theRegFunction.validate(regVal)
 
+display.innerHTML = toAdd
 
 	if(toAdd === "success"){
 		if(noRep){
@@ -32,20 +31,20 @@ display.innerHTML = toAdd
 		} 
 	}
 	
-		setTimeout(function(){
-		display.innerHTML = "";
-		}, 3000)
-	reg.value = "";
-	localStorage["registrations"] = JSON.stringify(theRegFunction.allTheRegs());
+	setTimeout(function(){
+	display.innerHTML = "";
+	}, 3000);
+		reg.value = "";
+		localStorage["registrations"] = JSON.stringify(theRegFunction.allTheRegs());
 }
 	// function that displays items according to radio button selected
 function filter(){
 
 var dropType = checkedDrop.value;
-var radio = theRegFunction.optionSelected(dropType);
-if(radio){
+var selectTown = theRegFunction.optionSelected(dropType);
+if(selectTown){
 	theList.innerHTML = "";
-		displaying(radio);
+		displaying(selectTown);
 	}
 }
 function displaying(list){
