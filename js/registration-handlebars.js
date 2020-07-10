@@ -26,12 +26,10 @@ function getRegistrations2(){
 	var regVal2 = (input.value).toUpperCase();
 	var add = regFunction.addingRegs2(regVal2);
 	msg.innerHTML = add;
-
-	if(add === "success"){
-	
+		if(add === "success"){
 		var each = {reg: regFunction.allTheRegs2()}
 		list.innerHTML = compilation(each)
-	} 
+		} 
 	setTimeout(function(){
 		msg.innerHTML = "";
 	}, 3000)
@@ -40,15 +38,12 @@ function getRegistrations2(){
 }
 	// function that displays items according to radio button selected
 function filter2(){
-
 	var dropType2 = dropDown.value;
 	var select = regFunction.optionSelected2(dropType2);
-
 		var each = {
 		reg: select
 		}
-	list.innerHTML = compilation(each);
+		list.innerHTML = compilation(each);
 }
-
 button.addEventListener("click", getRegistrations2);
 dropDown.addEventListener("change", filter2)

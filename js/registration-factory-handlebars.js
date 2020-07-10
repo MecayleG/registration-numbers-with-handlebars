@@ -2,7 +2,6 @@ function TheRegistrations2(allRegs2){
 	var numberPlates2 = allRegs2 || [];
 	var msg2 = "";
 	
-	
 	//function that does not add empty input and adds all valid registrations to array
 	function addingRegs2(input2){
 		if(input2 !== ""){
@@ -24,7 +23,6 @@ function TheRegistrations2(allRegs2){
 		}		
 		return msg2;	
 	}
-
 
 	// function displaying registrations according to radio button selected
 	function optionSelected2(selectType2){

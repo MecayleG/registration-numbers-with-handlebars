@@ -9,10 +9,10 @@ const btn = document.getElementById("displayBtn");
 const display = document.getElementById("regDisplay");
 var checkedDrop = document.querySelector(".select");
 const theList = document.getElementById("theList");
-
-window.addEventListener("load", function(){
+	//display previous regs
+	window.addEventListener("load", function(){
 	displaying(theRegFunction.allTheRegs());
-})
+	})
 	//function that checks if regs are valid or not
 function getRegistrations(){
 var regVal = (reg.value).toUpperCase();
@@ -21,7 +21,6 @@ var noRep = theRegFunction.noRepeat(theRegFunction.allTheRegs());
 var toVal = theRegFunction.validate(regVal)
 
 display.innerHTML = toAdd
-
 	if(toAdd === "success"){
 		if(noRep){
 			var li = document.createElement("li");
@@ -30,7 +29,6 @@ display.innerHTML = toAdd
 			li.classList.add("color");
 		} 
 	}
-	
 	setTimeout(function(){
 	display.innerHTML = "";
 	}, 3000);
@@ -40,12 +38,12 @@ display.innerHTML = toAdd
 	// function that displays items according to radio button selected
 function filter(){
 
-var dropType = checkedDrop.value;
-var selectTown = theRegFunction.optionSelected(dropType);
-if(selectTown){
-	theList.innerHTML = "";
+	var dropType = checkedDrop.value;
+	var selectTown = theRegFunction.optionSelected(dropType);
+		if(selectTown){
+		theList.innerHTML = "";
 		displaying(selectTown);
-	}
+		}
 }
 function displaying(list){
 	for( var i=0; i< list.length; i++){
@@ -58,6 +56,5 @@ function showReg(item){
 			li.innerHTML =  item;
 			li.classList.add("color")
 }
-
 btn.addEventListener("click", getRegistrations);
 checkedDrop.addEventListener("change", filter)

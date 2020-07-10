@@ -2,7 +2,6 @@ function TheRegistrations(allRegs){
 	var numberPlates = allRegs || [];
 	var msg = "";
 
-
 	//function that does not add empty input and adds all valid registrations to array
 	function addingRegs(input){
 		if(input !== ""){
